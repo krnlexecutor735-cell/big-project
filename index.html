@@ -2,8 +2,8 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Hider · สร้างลิงก์ซ่อนสคริป Roblox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Script Hider · ซ่อนสคริป Roblox แบบ Luarmor</title>
     <style>
         * { box-sizing: border-box; font-family: system-ui, 'Segoe UI', sans-serif; }
         body { background: linear-gradient(145deg, #0b0f1c 0%, #0a0e1a 100%); min-height: 100vh; margin: 0; padding: 2rem 1rem; display: flex; justify-content: center; align-items: center; }
@@ -19,6 +19,7 @@
         .status { color: #8e9ac0; margin-top: 1rem; }
         .error { color: #ff9e8f; background: #2e1a1f; padding: 0.5rem 1rem; border-radius: 1rem; }
         hr { border-color: #252b42; margin: 1rem 0; }
+        code { background: #00000060; padding: 0.2rem 0.5rem; border-radius: 8px; font-family: monospace; }
     </style>
 </head>
 <body>
@@ -43,15 +44,15 @@
             </div>
             <hr>
             <div style="font-size:0.85rem; color:#aab3d4;">✨ ตัวอย่างการใช้ใน Roblox:<br>
-            <code style="background:#00000060; display: inline-block; padding: 6px 12px; border-radius: 12px;">loadstring(game:HttpGet("ลิงก์ที่ได้"))()</code>
+            <code>loadstring(game:HttpGet("ลิงก์ที่ได้"))()</code>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    // 🔁 ใส่ URL ของ Cloudflare Worker ที่คุณ deploy ตรงนี้
-    const WORKER_URL = "https://bitter-hall-8675.krnlexecutor735.workers.dev/";   // <--- แก้ไขเป็น URL จริง
+    // 🔁 แก้ไข URL นี้ให้เป็น URL ของ Worker ที่คุณสร้าง
+    const WORKER_URL = "https://bitter-hall-8675.krnlexecutor735.workers.dev";
 
     const scriptInput = document.getElementById('scriptInput');
     const createBtn = document.getElementById('createBtn');
